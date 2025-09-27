@@ -9,7 +9,7 @@ export default function Logout() {
       try {
         await supabase.auth.signOut();
       } catch {}
-      // احتياطًا امسح مفاتيح supabase من التخزين المحلي
+      // احتياطاً امسح أي مفاتيح Supabase من التخزين المحلي
       Object.keys(localStorage)
         .filter((k) => k.startsWith('sb-'))
         .forEach((k) => localStorage.removeItem(k));
@@ -17,5 +17,5 @@ export default function Logout() {
     })();
   }, []);
 
-  return <div style={{padding:24, fontSize:18}}>جاري تسجيل الخروج…</div>;
+  return <div style={{ padding: 24, fontSize: 18 }}>جاري تسجيل الخروج…</div>;
 }
