@@ -24,3 +24,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }){
     </html>
   );
 }
+
+<a href="/logout" className="px-3 py-2 rounded-md border hover:bg-gray-100">تسجيل الخروج</a>
+
